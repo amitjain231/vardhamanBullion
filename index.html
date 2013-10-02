@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+
+<html> 
+<head> 
+	<title>Vardhaman Bullion</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Jquery Mobile JS and CSS -->	
+	<script src="./js/jquery-2.0.3.min.js"></script>
+	<script src="./js/jquery.mobile-1.3.2.min.js"></script>
+	<link rel="stylesheet" href="./css/jquery.mobile-1.3.2.min.css" />
+	
+	
+	<!-- Custom JS and css -->
+	<link rel="stylesheet" href="./css/vbPgGetMobileRates.css?ts=20130926151519" />
+	<script src="./js/vbPgGetMobileRates.js"></script>
+
+	
+</head> 
+<body onload="initApp();">
+	<input type="hidden" id="id_hid_Mob_g_ask" 		value="" />
+	<input type="hidden" id="id_hid_Mob_g_ft_ask" 	value="" />
+	<input type="hidden" id="id_hid_Mob_s_ask" 		value="" />
+	
+
+<div data-role="page" data-theme="a">
+
+
+	<div data-role="header" data-theme="b">
+		<div>
+			<!-- <a data-rel="back" >Exit</a> -->
+			<h4>Vardhaman Bullion</h4>
+		</div>
+	</div>
+	
+	
+	<div data-role="content">		
+    <div class="ui-grid-a cl_td_grid">
+      <div class="ui-block-a cl_td_label" >Gold <span class="cl_td_label_999">( 999 per gm )</span></div>
+      <div class="ui-block-b cl_td_data" id="id_div_gold999_rate">&nbsp;</div>
+      <div class="ui-block-a cl_td_label" >Gold FT<span class="cl_td_label_999">( 999 per gm )</span></div>
+      <div class="ui-block-b cl_td_data" id="id_div_goldft999_rate">&nbsp;</div>
+      <div class="ui-block-a cl_td_label">Silver <span class="cl_td_label_999">( 999 per kg )</span></div>
+      <div class="ui-block-b cl_td_data" id="id_div_silver999_rate">&nbsp;</div>
+    </div>
+   
+   <div class="cl_divPoweredBy">
+		<span style="color:#33FC21;">Powered by</span> 
+		<span style="color:#FAFF69;">magic</span><span style="color:#33FC21;">Bul</span>   
+   </div>
+   
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<h1>Thank you</h1>
+	</div><!-- /Footer -->
+
+</div><!-- /page -->
+
+</body>
+</html>

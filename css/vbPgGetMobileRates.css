@@ -1,0 +1,47 @@
+h4
+{
+	text-align: center;	
+}
+
+
+.cl_td_grid
+{
+	background-color: black;
+	padding-left: 5px;
+}
+.cl_td_label
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	background-color: black;
+	margin-top: 10px;
+	
+}
+
+.cl_td_label_999
+{
+	font-size: 6pt;
+	font-weight:bold;
+	color: orange;
+}
+
+.cl_td_data
+{
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15pt;
+	font-weight: bold;
+	background-color: black;
+	text-align: center;
+	margin-top: 10px;
+	
+}
+
+.cl_divPoweredBy
+{
+	margin-top: 50px;
+	text-align: center;
+	font-family: arial,verdana,sans-serif;
+	font-size: 10pt;
+	font-weight: bold;	
+}
