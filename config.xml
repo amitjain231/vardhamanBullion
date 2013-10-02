@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.phonegap.vardhamanbullion.package"
+        versionCode="01" 
+        version   = "1.0.0">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Vardhaman Bullion</name>
+
+    <description>
+        Vardhaman Bullion is a renowned company providing Bullion, Jewellery (Silver and Gold) in India. Established in 
+        Jan 2000, it has grown leaps and bounds and is now a leading company providing competitive rates and impeccable 
+        service
+    </description>
+
+    <author href="http://www.magicbul.com" email="amitjain231@gmail.com">
+        Amit kumar Jain
+    </author>
+
+	<gap:platform name="ios" />
+	<gap:platform name="android" />
+	<gap:platform name="blackberry" />
+	<gap:platform name="winphone" />
+	
+	<preference name="orientation" value="both" />
+	<preference name="fullscreen" value="true" />	
+	
+	<icon src="icon.png" gap:platform="ios" width="57" height="57" />
+	<icon src="icon.png" gap:platform="blackberry" />	
+	<icon src="icons/winphone/icon.png" gap:platform="winphone" />
+	
+	<icon src="icon.png" gap:platform="android" gap:density="ldpi" />
+	<icon src="icon.png" gap:platform="android" gap:density="mdpi" />
+	<icon src="icon.png" gap:platform="android" gap:density="hdpi" />
+	<icon src="icon.png" gap:platform="android" gap:density="xhdpi" />
+
+	<gap:splash src="splash.png" gap:platform="ios" width="480" height="800" />
+	<gap:splash src="splash.png" gap:platform="blackberry" />
+	<gap:splash src="splash.jpg" gap:platform="winphone" />
+	
+	<gap:splash src="splash.png" gap:platform="android" gap:density="ldpi" />
+	<gap:splash src="splash.png" gap:platform="android" gap:density="mdpi" />
+	<gap:splash src="splash.png" gap:platform="android" gap:density="hdpi" />
+	<gap:splash src="splash.png" gap:platform="android" gap:density="xhdpi" />
+
+</widget>
