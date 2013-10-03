@@ -1,6 +1,8 @@
 jsGlobalColorRateUp			=	'#0FD634';
 jsGlobalColorRateDown		=	'#ED093F';
 jsGlobalColorRateUnchanged	=	'#000000';   //'transparent';
+//jsGlobalJsonpUrl = 'http://local_vardhamanbullion/dynamic/vbPgGetMobileRatesDynGet.php?callback=jsProcessJSONPResult';
+jsGlobalJsonpUrl = 'http://www.vardhamanbullion.com/dynamic/vbPgGetMobileRatesDynGet.php?callback=jsProcessJSONPResult';
 
 function initApp()
 {
@@ -19,10 +21,10 @@ function jsMobRefVBRates()
 function jsMobUpdVBRates()
 {
    // Local data declarations
-	var jsParamStr, jsMainpageToken;
 	var jsCurrGoldBid, jsCurrGoldAsk, jsCurrSilverBid, jsCurrSilverAsk;
 	var jsToday, jsCurrYear, jsCurrMonth, jsCurrDate;
 	var jsCurrMonthStr, jsUTCDateStr;
+	var jsURL;
 	
 	//------- Format current UTC Date start -------->	
 	jsToday = new Date();
@@ -58,58 +60,50 @@ function jsMobUpdVBRates()
 	jsCurrGoldAsk 		= document.getElementById('id_hid_Mob_g_ask').value;
 	jsCurrGoldFTAsk 	= document.getElementById('id_hid_Mob_g_ft_ask').value;
 	jsCurrSilverAsk 	= document.getElementById('id_hid_Mob_s_ask').value;
+	
+	jsURL = '';
+	jsURL = jsGlobalJsonpUrl + "&PIN=" + jsUTCDateStr;
+	jsURL = jsURL + "&CURRGOLDASK=" + jsCurrGoldAsk;
+	jsURL = jsURL + "&CURRGOLDFTASK=" + jsCurrGoldFTAsk;
+	jsURL = jsURL + "&CURRSILVERASK=" + jsCurrSilverAsk;
+	
+	//-------- Start Cross-Site Call -------->
+      var head = document.head;
+      var script = document.createElement("script");
 
+      script.setAttribute("src", jsURL);
+      head.appendChild(script);
+      head.removeChild(script);
+      		
+	//-------- End Cross-Site Call -------->	
 	
-	
-	//----------------- Ajax update ------------->
-	jsParamStr='';
-	jsParamStr = jsParamStr + 'PIN=' + jsUTCDateStr;
-	jsParamStr = jsParamStr + '&';
-	jsParamStr = jsParamStr + 'CURRGOLDASK=' + jsCurrGoldAsk;
-	jsParamStr = jsParamStr + '&';
-	jsParamStr = jsParamStr + 'CURRGOLDFTASK=' + jsCurrGoldFTAsk;
-	jsParamStr = jsParamStr + '&';
-	jsParamStr = jsParamStr + 'CURRSILVERASK=' + jsCurrSilverAsk;
-	
-	
-	//alert(jsParamStr);	
-	$.ajax({type:			"POST", 
-				async:		"true",
-				url:			"vbPgGetMobileRatesDynGet.php", 
-	   		dataType: 	"html",
-				data: 		jsParamStr,
-				success: 	onAjaxMobRateStreamSuccess,
-				error: 		onAjaxMobRateStreamError
-	});	
-
 	
 }
 
 
-function onAjaxMobRateStreamSuccess( jsResult )
+function jsProcessJSONPResult(jsonData)
 {
-	//alert(jsResult);
+
 	//---------- local data ---------->
 	var jskeyType, jsFlag, jsErrCode, jsErrDesc;
 	var jsJSONObjArr, jsTabResultArr;
 	var jsAsk, jsDir; 
 	
-	jsJSONObjArr = $.parseJSON(jsResult);
-	
+		
 	// Check if Success / Error  
-	jskeyType 	= jsJSONObjArr.RESULT[0].KEY;
-	jsFlag 		= jsJSONObjArr.RESULT[0].FLAG;
-	jsErrCode	= jsJSONObjArr.RESULT[0].CODE;
-	jsErrDesc	= jsJSONObjArr.RESULT[0].DESC;
+	jskeyType 	= jsonData.RESULT[0].KEY;
+	jsFlag 		= jsonData.RESULT[0].FLAG;
+	jsErrCode	= jsonData.RESULT[0].CODE;
+	jsErrDesc	= jsonData.RESULT[0].DESC;
 	
 	
 	if (jsFlag == "S")
 	{
-		for (var i=1; i< jsJSONObjArr.RESULT.length; i++)
+		for (var i=1; i< jsonData.RESULT.length; i++)
 		{
-			jskeyType	= jsJSONObjArr.RESULT[i].KEY;
-			jsAsk			= jsJSONObjArr.RESULT[i].ASK;
-			jsDir			= jsJSONObjArr.RESULT[i].DIR;
+			jskeyType	= jsonData.RESULT[i].KEY;
+			jsAsk			= jsonData.RESULT[i].ASK;
+			jsDir			= jsonData.RESULT[i].DIR;
 
 			//alert(jskeyType);
 			switch( jskeyType )
@@ -187,11 +181,6 @@ function onAjaxMobRateStreamSuccess( jsResult )
 	{
 		
 	}
-		
-}		// End method onAjaxMobRateStreamSuccess
 
-
-function onAjaxMobRateStreamError( jsXhrObj )
-{
-	//alert("An error occured: " + jsXhrObj.status + " " + jsXhrObj.statusText);
-}
+	
+}		// End function - jsProcessJSONPResult
