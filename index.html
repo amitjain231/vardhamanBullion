@@ -14,17 +14,21 @@
 	
 	<!-- Custom JS and css -->
 	<link rel="stylesheet" href="./css/vbPgGetMobileRates.css?ts=20131003151519" />
+	<link rel='stylesheet' type='text/css' href='css/rupee.css'></link>
 	<script src="./js/vbPgGetMobileRates.js?ts=20131003151519"></script>
 
 	
 </head> 
 <body onload="initApp();">
-	<input type="hidden" id="id_hid_Mob_g_ask" 		value="" />
-	<input type="hidden" id="id_hid_Mob_g_ft_ask" 	value="" />
-	<input type="hidden" id="id_hid_Mob_s_ask" 		value="" />
+	<input type="hidden" id="id_hid_Mob_g999r_ask" 		value="0" />
+	<input type="hidden" id="id_hid_Mob_g999t_ask" 		value="0" />
+	<input type="hidden" id="id_hid_Mob_s999r_ask" 		value="0" />
+	<input type="hidden" id="id_hid_Mob_s999t_ask" 		value="0" />
+	<input type="hidden" id="id_hid_Mob_xau_ask" 		    value="0" />
+	<input type="hidden" id="id_hid_Mob_xag_ask" 		    value="0" />
 	
-
-<div data-role="page" data-theme="a">
+	
+<div data-role="page" id="mainpage" data-theme="a">
 
 
 	<div data-role="header" data-theme="b">
@@ -35,15 +39,36 @@
 	</div>
 	
 	
-	<div data-role="content">		
-    <div class="ui-grid-a cl_td_grid">
-      <div class="ui-block-a cl_td_label" >Gold <span class="cl_td_label_999">( 999 per gm )</span></div>
-      <div class="ui-block-b cl_td_data" id="id_div_gold999_rate">&nbsp;</div>
-      <div class="ui-block-a cl_td_label" >Gold FT<span class="cl_td_label_999">( 999 per gm )</span></div>
-      <div class="ui-block-b cl_td_data" id="id_div_goldft999_rate">&nbsp;</div>
-      <div class="ui-block-a cl_td_label">Silver <span class="cl_td_label_999">( 999 per kg )</span></div>
-      <div class="ui-block-b cl_td_data" id="id_div_silver999_rate">&nbsp;</div>
-    </div>
+	<div data-role="content">	
+	
+		<div class="ui-grid-a cl_td_grid" id="id_div_grid_outer">
+		<!-- Default it to No Steaming -->
+		<div class='cl_stream_off' >Data Streaming is <span style='color:#E35E1B'>off... </span> </div>
+		
+		<!--
+		  <div class="ui-block-a cl_td_label" >Gold <span class="cl_td_label_2">( RTGS )</span></div>
+		  <div class="ui-block-b cl_td_data" id="id_div_g999r">0000&nbsp;</div>
+		  <div class="ui-block-a cl_td_label" >Gold <span class="cl_td_label_2">( TCS )</span></div>
+		  <div class="ui-block-b cl_td_data" id="id_div_g999t">1111&nbsp;</div>
+		  <div class="ui-block-a cl_td_label">Silver <span class="cl_td_label_2">( RTGS )</span></div>
+		  <div class="ui-block-b cl_td_data" id="id_div_s999r">2222&nbsp;</div>
+		  <div class="ui-block-a cl_td_label">Silver <span class="cl_td_label_2">( TCS )</span></div>
+		  <div class="ui-block-b cl_td_data" id="id_div_s999t">&nbsp;</div>
+		  <div class="ui-block-a cl_td_label">Gold <span class="cl_td_label_2">XAUUSD</span></div>
+		  <div class="ui-block-b cl_td_data" id="id_div_xau">&nbsp;</div>
+		  <div class="ui-block-a cl_td_label">Gold <span class="cl_td_label_2">XAGUSD</span></div>
+		  <div class="ui-block-b cl_td_data" id="id_div_xag">&nbsp;</div>
+		  -->
+		  
+	</div>
+
+   <a href="#popup" id="id_btn_updateapp" data-role="button" data-rel="dialog" data-transition="pop" data-theme="e">
+		Update App
+	</a>
+   <script>
+		//$('#id_btn_updateapp').buttonMarkup({ inline: true });
+		$('#id_btn_updateapp').css("display", "none");
+   </script>
    
    <div class="cl_divPoweredBy">
 		<span style="color:#33FC21;">Powered by</span> 
@@ -52,11 +77,32 @@
    
 	</div><!-- /content -->
 
+	
+	
 	<div data-role="footer" data-position="fixed" data-theme="b">
 		<h1>Thank you</h1>
 	</div><!-- /Footer -->
 
+	
 </div><!-- /page -->
+
+
+
+<div data-role="page" id="popup">
+
+	<div data-role="header" data-theme="e">
+		<h1>Update App</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">	
+		<p> Dear Customer, Please update latest version of this App from Store to enjoy new features. </p>
+		<p><a href="#mainpage" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Thank You</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
 
 </body>
 </html>
