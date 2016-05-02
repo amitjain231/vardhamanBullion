@@ -2,7 +2,7 @@
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.vardhamanbullion.live"
-        versionCode="14" 
+        versionCode="15" 
         version   = "1.0.0">
 
 
@@ -46,7 +46,7 @@
 
 	<!-- Preferences Permissions, Phonegap version to build -->
 	<preference name="permissions" value="none"/>
-	<preference name="phonegap-version" value="3.6.3" />	
+	<preference name="phonegap-version" value="3.5.0" />	
 	
 	<!-- Required only Notification permission -->
 	<feature name="http://api.phonegap.com/1.0/notification"/>

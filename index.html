@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
-
-<html> 
+<html>
 <head> 
 	<title>Vardhaman Bullion</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,21 +8,22 @@
 	<!--  Needs to be updated before publishing  End -->
 	
 	<!-- Jquery Mobile JS and CSS -->
-	<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
-	<link rel="stylesheet" href="css/jquery.mobile.structure-1.3.2.min.css" />
-	<link rel="stylesheet" href="css/jquery.mobile.theme-1.3.2.min.css" />
-	<script src="js/jquery-2.0.3.min.js"></script>
-	<script src="js/jquery.mobile-1.3.2.min.js"></script>
+	<link rel="stylesheet" type='text/css' href="css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" type='text/css' href="css/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" type='text/css' href="css/jquery.mobile.theme-1.4.5.min.css" />
+	<link rel="stylesheet" type='text/css' href="css/animate.css-master/animate.min.css" />
+	<link rel="stylesheet" type='text/css' href="css/vbPgGetMobileRates.css?ts=20150116191919" />
+	<link rel='stylesheet' type='text/css' href='css/rupee.css'></link>
+	<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>	
 	
-	
-	
-	<!-- Custom JS and css -->
-	<link rel="stylesheet" href="css/vbPgGetMobileRates.css?ts=20150116191919" />
-	<!-- <link rel='stylesheet' type='text/css' href='css/rupee.css'></link> -->
-	<script src="./js/vbPgGetMobileRates.js?ts=20150116191919"></script>
-
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/vbPgGetMobileRates.js?ts=20154646"></script>
 	
 </head> 
+
+
 <body onload="initApp();">
 	<input type="hidden" id="id_hid_mob_param1" 		value="0" />
 	<input type="hidden" id="id_hid_mob_param2" 		value="0" />
@@ -36,86 +35,466 @@
 	<input type="hidden" id="id_hid_mob_param8" 		value="0" />
 	<input type="hidden" id="id_hid_mob_param9" 		value="0" />
 	<input type="hidden" id="id_hid_mob_param10" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param11" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param12" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param13" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param14" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param15" 		value="0" />
 	
 	
-<div data-role="page" id="mainpage" data-theme="a">
+<div data-role="page" id="mainpage" data-theme="b" class="cl_VBMainPage">
 
 
-	<div data-role="header" data-theme="b" style='height: 50px;'>
-		<div>
-			<!-- <a data-rel="back" >Exit</a> -->
-			<h4>Vardhaman Bullion</h4>
-		</div>
+	<div data-role="header" data-theme="b" class=" cl_vb_header" style=''>
+		<div style="font-family: Montserrat;"> Vardhaman Bullion </div>
 	</div>
 	
 	
-	<div data-role="content">	
-	
-		<div class="ui-grid-a cl_td_grid" id="id_div_grid_outer">
-			<!-- Default it to No Steaming -->
-			<div class='cl_stream_off' >Data Streaming is <span style='color:#E35E1B'>off... </span> </div>
-
-		</div>
-
-		<marquee
-			direction=left
-			scrolldelay="150"  
-			onmouseover="this.stop();" 
-			onmouseout="this.start();" 
-			class="cl_marq_scrollMsg"
-			id="id_scroll_marq" >
-			
-			Booking Contact: <span class="cl_span_contact1">+91 866 2577890 </span> /  
-												<span class="cl_span_contact2">+91 9440943890 </span> / 
-												<span class="cl_span_contact3">+91 9701918241 </span>
-			
-	    			
-		</marquee>
+	<div data-role="content" style="padding-top:0px;">
 		
-	   <a href="#popup" id="id_btn_updateapp" data-role="button" data-rel="dialog" data-transition="pop" data-theme="a">
+				
+		<div class="ui-grid-solo cl_div_grid_nostream" id="id_div_grid_nostream">
+			
+			<div class="ui-block-a cl_td_block_nostream" >
+				<div class='cl_div_stream_off'>
+					Data Streaming is <span style='color:#E35E1B'>off... </span> 
+				</div>
+			</div>
+		
+		</div>
+		
+		
+		<div class="ui-grid-b cl_div_grid_comex_wrapper animated zoomIn" id="id_div_grid_comex">
+			<div class="ui-block-a cl_div_symbol_xauusd_ask cl_div_bk_sym_xauusd_ask" >
+				<table class="cl_vb_tbl_comex_data">
+					<tr>
+						<td colspan='2' class="cl_td_comex_hdg_xau">
+							Comex Gold
+						</td>
+					</tr>						
+					<tr>
+						<td class="cl_vb_td_comex_dollar ">$</td>
+						<td class="cl_vb_td_comex_rate"> <span id="id_span_data_comex_g_ask">1127.25</span> </td>
+					</tr>
+				</table>
+			</div>
+			<div class='ui-block-b cl_div_symbol_xagusd_ask cl_div_bk_sym_xagusd_ask' >
+				<table class="cl_vb_tbl_comex_data">
+					<tr>
+						<td colspan='2' class="cl_td_comex_hdg_xag">
+							Comex Silver
+						</td>
+					</tr>
+					<tr>
+						<td class="cl_vb_td_comex_dollar ">$</td>
+						<td class="cl_vb_td_comex_rate"> <span id="id_span_data_comex_s_ask">16.22</span> </td>
+					</tr>
+				</table>
+				
+			</div>	
+			<div class='ui-block-c cl_div_symbol_usdinr_ask cl_div_bk_sym_usdinr_ask' >
+				<table class="cl_vb_tbl_comex_data">
+					<tr>
+						<td colspan='2' class="cl_td_comex_hdg_usd">
+							USDINR
+						</td>
+					</tr>
+					<tr>
+						<td class="cl_vb_td_comex_rupee ">Rs.</td>
+						<td class="cl_vb_td_comex_rate"> <span id="id_span_data_comex_u_ask">63.45</span> </td>
+					</tr>
+				</table>
+			</div>
+			
+		</div>
+			
+			
+			
+			
+		<div class="ui-grid-a cl_div_grid_symbol_wrapper" id="id_div_grid_g999r">
+			<div class="ui-block-a cl_symbol_label_g" >
+				Gold RTGS
+			</div>
+			<div class="ui-block-b cl_sym_bkcolor_g999r" style="height:100%;">
+				<table class="cl_vb_tbl_symbol_rate_data">
+					<tr>
+						<td class="cl_vb_td_symbol_rupee ">Rs.</td>
+						
+						<td>
+							<span id="id_span_data_g999r_ask">3005.10</span>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+			
+		</div>
+		
+		<div class="ui-grid-a cl_div_grid_symbol_wrapper" id="id_div_grid_g999t">
+			<div class="ui-block-a cl_symbol_label_g" >
+				Gold TCS
+			</div>
+			<div class="ui-block-b cl_sym_bkcolor_g999t" >
+				<table class="cl_vb_tbl_symbol_rate_data">
+					<tr>
+						<td class="cl_vb_td_symbol_rupee ">Rs.</td>
+						
+						<td>
+							<span id="id_span_data_g999t_ask">3010.10</span>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+			
+		</div>	
+		
+		<div class="ui-grid-a cl_div_grid_symbol_wrapper" id="id_div_grid_gft999r">
+			<div class="ui-block-a cl_symbol_label_g" >
+				Gold FT RTGS
+			</div>
+			<div class="ui-block-b cl_sym_bkcolor_gft999r" >
+				<table class="cl_vb_tbl_symbol_rate_data">
+					<tr>
+						<td class="cl_vb_td_symbol_rupee ">Rs.</td>
+						
+						<td>
+							<span id="id_span_data_gft999r_ask">2980.00</span>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+			
+		</div>
+		
+		<div class="ui-grid-a cl_div_grid_symbol_wrapper" id="id_div_grid_gft999t">
+			<div class="ui-block-a cl_symbol_label_g" >
+				Gold FT TCS
+			</div>
+			<div class="ui-block-b cl_sym_bkcolor_gft999t" >
+				<table class="cl_vb_tbl_symbol_rate_data">
+					<tr>
+						<td class="cl_vb_td_symbol_rupee ">Rs.</td>
+						
+						<td>
+							<span id="id_span_data_gft999t_ask">2984.00</span>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+			
+		</div>
+		
+		
+		<div class="ui-grid-a cl_div_grid_symbol_wrapper" id="id_div_grid_s999r">
+			<div class="ui-block-a cl_symbol_label_s" >
+				Silver RTGS
+			</div>
+			<div class="ui-block-b cl_sym_bkcolor_s999r" >
+				<table class="cl_vb_tbl_symbol_rate_data">
+					<tr>
+						<td class="cl_vb_td_symbol_rupee ">Rs.</td>
+						
+						<td>
+							<span id="id_span_data_s999r_ask">42450</span>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+			
+		</div>
+		<div class="ui-grid-a cl_div_grid_symbol_wrapper" id="id_div_grid_s999t">
+			<div class="ui-block-a cl_symbol_label_s" >
+				Silver TCS
+			</div>
+			<div class="ui-block-b cl_sym_bkcolor_s999t" >
+				<table class="cl_vb_tbl_symbol_rate_data">
+					<tr>
+						<td class="cl_vb_td_symbol_rupee ">Rs.</td>
+						
+						<td>
+							<span id="id_span_data_s999t_ask">42500</span>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+			
+		</div>
+		
+		
+		
+		
+		<a href="#" id="id_btn_updateapp" data-role="button" data-rel="dialog" data-transition="pop" data-theme="b">
 			Update App
 		</a>
 		
-	   <script>
-			//$('#id_btn_updateapp').buttonMarkup({ inline: true });
-			$('#id_btn_updateapp').css("display", "none");
-	   </script>
+		<div data-role="popup" id="UpdateApppopup" class="ui-content" 
+			data-overlay-theme="b" style="background-color: #F2AB11;">
+		
+			<a href="#" data-rel="back" data-role="button"  data-theme="b" 
+			data-icon="delete" data-iconpos="notext" class="ui-btn-right">&nbsp;</a>
+			
+			<div data-role="header" data-theme="a">
+				<h1>Update App</h1>
+			</div><!-- /header -->
+
+			<div data-role="content" data-theme="a">	
+				<p> Dear Customer, Please update latest version of this App from Store to enjoy new features. </p>
+				
+				<a href="#" id="id_playstore" data-role="button" data-theme="b"
+					onclick="javascript:window.open('https://play.google.com/store/apps/details?id=com.phonegap.vardhamanbullion.live&hl=en')">
+					Playstore
+				</a>
+				
+			</div><!-- /content -->
+			
+		</div><!-- /page popup -->
 	   
-	   <!--
-	   <div class="cl_divPoweredBy">
-			<span style="color:#33FC21;">Powered by</span> 
-			<span style="color:#FAFF69;">magic</span><span style="color:#33FC21;">Bul</span>   
-	   </div>
-	   -->
+	   
    
 	</div><!-- /content -->
 
 	
 	
-	<div data-role="footer" data-position="fixed" data-theme="b">
-		<h1>Powered By magicBul</h1>
-	</div><!-- /Footer -->
+	<!--               Footer           -->
+	<div data-role="footer" data-position="fixed" data-iconpos="bottom">
+		<div class="cl_vb_div_outer_marquee">
+			<marquee
+				direction=left
+				scrolldelay="150"  
+				onmouseover="this.stop();" 
+				onmouseout="this.start();" 
+				class="cl_marq_scrollMsg"
+				id="id_scroll_marq" >
+			</marquee>
+		</div>		
+		
+		<div data-role="navbar"  class="custom-navbar">
+			<ul>
+				<li><a id="id_a_vb_booking" href="#" data-icon="phone" 
+					data-position-to="window" data-rel="popup" class="ui-btn ui-btn-inline">
+						<span class="cl_span_footernav_menuitem">Booking </span>
+					</a></li>
+				<li><a id="id_a_vb_contact" href="#" data-icon="user" 
+					data-position-to="window" data-rel="popup" class="ui-btn ui-btn-inline" >
+						<span class="cl_span_footernav_menuitem">Contact</span>
+					</a></li>
+				<li><a id="id_a_vb_rtgs" href="#" data-icon="location" 
+					data-position-to="window" data-rel="popup" class="ui-btn ui-btn-inline" >
+						<span class="cl_span_footernav_menuitem">RTGS</span>
+					</a></li>
+			</ul>
+		</div>
+		
+		<div style="background-color: #052F5C;">
+			<div class="ui-grid-a">
+				<div class="ui-block-a cl_vb_div_footer_copyright">
+					Copyright &copy 
+					<script type='text/javascript'>document.write( new Date().getFullYear());</script>
+					by Vardhaman Bullion
+				</div>
+				
+				<div class="ui-block-b cl_vb_divPoweredBy">
+					Powered by magicBul
+				</div>
+				
+			</div>
+		</div>
 
+		
+		<div data-role="popup" id="myPopupBooking" class="ui-content" 
+			data-overlay-theme="b" style="background-color: #47484A;">
+		
+		  <a href="#" data-rel="back" data-role="button"  data-theme="b" 
+			data-icon="delete" data-iconpos="notext" class="ui-btn-right">&nbsp;</a>
+			
+			<p style="color:black; background-color: #FAF8A2;padding: 1.5vh;">Booking Contact 
+				<span style="font-family: Roboto Slab, arial; font-size: 8pt;color:blue;"> (Touch to Call)</span> </p>
+				<table style="margin: 0px;">
+					<tr>
+						<td> 
+							<a href="#" data-role="button" data-icon="phone" data-iconpos="notext">&nbsp;</a>					
+						</td>
+						
+						<td colspan=2> <a href="tel:08662577890">+91 866 2577890</a></td>
+					</tr>
+				
+					<tr>
+						<td> 
+							<a href="#" data-role="button" data-icon="phone" data-iconpos="notext">&nbsp;</a>					
+						</td>
+					
+						<td> <a href="tel:9440943890">+91 9440943890</a></td>
+							
+						
+						<td>
+							<span style="font-size: 10pt;color:yellow;">(Basant Lal Jain) </span>
+						</td>	
+					
+					</tr>	
+				
+					<tr>
+						<td> 
+							<a href="#" data-role="button" data-icon="user" data-iconpos="notext">&nbsp;</a>					
+						</td>
+							
+						<td> <a href="tel:9701918241">+91 9701918241</a></td>
+					
+						<td>
+							<span style="font-size: 10pt;color:yellow;">(Amit kumar Jain)</span> 
+						</td>
+					</tr>	
+					
+				</table>
+
+		</div> <!--   myPopupBooking   -->
+		
+		
+		<div data-role="popup" id="myPopupContact" class="ui-content" 
+			data-overlay-theme="b" style="background-color: #E66510;">
+			
+			  <a href="#" data-rel="back" data-role="button"  data-theme="b" 
+				data-icon="delete" data-iconpos="notext" class="ui-btn-right">&nbsp;</a>
+		
+				<table>
+					<tr>
+						<td > 
+							<a href="#" data-role="button" data-icon="location" data-iconpos="notext">&nbsp;</a>
+							
+						</td>
+						<td vertical-align='middle'>
+							<span style="font-size: 14pt; font-weight: bold; vertical-align:middle;">Registered Office</span></td>
+						
+					</tr>
+					<tr>
+						<td colspan=2 style="color:black; font-size: 12pt;font-family: sans-serif;"> Vardhaman Bullion</td>
+					</tr>
+					<tr>
+						<td colspan=2 style="color:yellow; font-size: 10pt;font-family: sans-serif;"> 27-14-16, Jaihind Complex, EV Plaza</td>						
+					</tr>
+					<tr>
+						<td colspan=2 style="color:yellow; font-size: 10pt;font-family: sans-serif;"> 2nd Floor, Rajagopalachari Street,</td>
+					</tr>
+					<tr>
+						<td colspan=2 style="color:yellow; font-size: 10pt;font-family: sans-serif;"> Governorpet, Vijayawada</td>
+					</tr>
+					<tr>
+						<td colspan=2 style="color:yellow; font-size: 10pt;font-family: sans-serif;">Andhra Pradesh 520002, India</td>
+					</tr>
+					
+				
+				</table>
+				
+				<hr />
+				
+				<table>
+					<tr>
+						<td> 
+							<a href="#" data-role="button" data-icon="mail" data-iconpos="notext">&nbsp;</a>
+						</td>
+						<td> 
+							<span class="cl_span_contact_email"> vardhamanbullion@gmail.com</span>
+						</td>
+					</tr>
+					
+				</table>	
+				
+				
+				<div style="width:75vw; height:30vh;border: 0px; margin: 0px auto;" id="id_cu_ifrm_googlemap" >
+					
+				</div>
+				
+		</div> <!--   myPopupContact   -->
+		
+		
+		<div data-role="popup" id="myPopupRTGS" class="ui-content" 
+			data-overlay-theme="b" style="width: 60vw;background-color: #BA0D5E;">
+			
+			  <a href="#" data-rel="back" data-role="button"  data-theme="b" 
+				data-icon="delete" data-iconpos="notext" class="ui-btn-right">&nbsp;</a>
+		
+				<table class="cl_tbl_bankinfo" > 
+					<tr>
+						<td> 
+						
+							<a href="#" data-role="button" data-icon="home" data-iconpos="notext">&nbsp;</a>
+							
+						</td>
+						<td vertical-align='middle'>
+							<span style="padding-left:10px;font-size: 14pt; font-weight: bold; vertical-align:middle;">
+							Bank Details
+							</span>
+						</td>
+						
+					</tr>
+					
+					<tr>
+						<td colspan=2> <hr /> </td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> Bank:</td>
+						<td class="cl_td_bankdata"> <span style="color:yellow;">Axis Bank</span></td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> Branch:</td>
+						<td class="cl_td_bankdata"> One Town Branch</td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> Name:</td>
+						<td class="cl_td_bankdata"> Vardhaman Bullion</td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> Account:</td>
+						<td class="cl_td_bankdata"> 913020050737711</td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> IFSC:</td>
+						<td class="cl_td_bankdata"> UTIB0000555</td>
+					</tr>
+					
+					<tr>
+						<td colspan=2> <hr /> </td>
+					</tr>
+				</table>
+				
+				
+		</div> <!--   myPopupContact   -->
+		
+		
+		
+	</div>
+	
 	
 </div><!-- /page -->
 
 
 
-<div data-role="page" id="popup">
 
-	<div data-role="header" data-theme="e">
-		<h1>Update App</h1>
-	</div><!-- /header -->
 
-	<div data-role="content" data-theme="d">	
-		<p> Dear Customer, Please update latest version of this App from Store to enjoy new features. </p>
-		<p><a href="#mainpage" data-rel="back" data-role="button" data-inline="true" data-icon="arrow-l">Back</a></p>	
-	</div><!-- /content -->
-	
-	<div data-role="footer">
-		<h4>Thank You</h4>
-	</div><!-- /footer -->
-</div><!-- /page popup -->
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript">
+	function initialize()
+	{
+		var myLatLng = {lat: 16.511661, lng: 80.626003};
+
+		  var map = new google.maps.Map(document.getElementById('id_cu_ifrm_googlemap'), {
+			zoom: 20,
+			center: myLatLng
+		  });
+
+		  var marker = new google.maps.Marker({
+			position: myLatLng,
+			map: map,
+			title: 'Sri Pavitra Gold Bullion'
+		  });	
+		
+	}		
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 
 </body>
 </html>
