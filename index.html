@@ -45,8 +45,13 @@
 <div data-role="page" id="mainpage" data-theme="b" class="cl_VBMainPage">
 
 
-	<div data-role="header" data-theme="b" class=" cl_vb_header" style=''>
+	<div data-role="header" data-theme="b" 
+		data-position="fixed" 
+		data-tap-toggle="false"	
+		class=" cl_vb_header">
+		
 		<div style="font-family: Montserrat;"> Vardhaman Bullion </div>
+		
 	</div>
 	
 	
@@ -236,8 +241,8 @@
 		
 		
 		<!-- Update App -->
-		<div class="ui-grid-solo cl_div_updateapp" >			
-			<span  id="id_span_updateapp" style="color: black; font-size: 10pt;">Update App</span>			
+		<div class="ui-grid-solo cl_div_updateapp" id="id_div_updateapp" >
+			<span style="color: black; font-size: 10pt;">Update App</span>			
 		</div>
 		
 		
@@ -272,7 +277,10 @@
 	
 	
 	<!--               Footer           -->
-	<div data-role="footer" data-position="fixed" data-iconpos="bottom">
+	<div data-role="footer" data-position="fixed" 
+		data-tap-toggle="false"
+		data-iconpos="bottom">
+		
 		<div class="cl_vb_div_outer_marquee">
 			<marquee
 				direction=left
