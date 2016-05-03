@@ -63,6 +63,8 @@
 		
 		</div>
 		
+		<!-- Separator -->
+		<div class="ui-grid-solo" style="margin: 3px 0px;"></div>
 		
 		<div class="ui-grid-b cl_div_grid_comex_wrapper animated zoomIn" id="id_div_grid_comex">
 			<div class="ui-block-a cl_div_symbol_xauusd_ask cl_div_bk_sym_xauusd_ask" >
@@ -109,13 +111,14 @@
 		</div>
 			
 			
-			
+		<!-- Separator -->
+		<div class="ui-grid-solo" style="margin: 5px 0px;"></div>	
 			
 		<div class="ui-grid-a cl_div_grid_symbol_wrapper" id="id_div_grid_g999r">
 			<div class="ui-block-a cl_symbol_label_g" >
 				Gold RTGS
 			</div>
-			<div class="ui-block-b cl_sym_bkcolor_g999r" style="height:100%;">
+			<div class="ui-block-b cl_sym_bkcolor_g999r">
 				<table class="cl_vb_tbl_symbol_rate_data">
 					<tr>
 						<td class="cl_vb_td_symbol_rupee ">Rs.</td>
@@ -188,6 +191,12 @@
 		</div>
 		
 		
+		
+		<!-- Separator -->
+		<div class="ui-grid-solo" style="margin: 5px 0px;"></div>
+		
+		
+		
 		<div class="ui-grid-a cl_div_grid_symbol_wrapper" id="id_div_grid_s999r">
 			<div class="ui-block-a cl_symbol_label_s" >
 				Silver RTGS
@@ -226,11 +235,13 @@
 		</div>
 		
 		
+		<!-- Update App -->
+		<div class="ui-grid-solo cl_div_updateapp" >			
+			<span  id="id_span_updateapp" style="color: black; font-size: 10pt;">Update App</span>			
+		</div>
 		
 		
-		<a href="#" id="id_btn_updateapp" data-role="button" data-rel="dialog" data-transition="pop" data-theme="b">
-			Update App
-		</a>
+		
 		
 		<div data-role="popup" id="UpdateApppopup" class="ui-content" 
 			data-overlay-theme="b" style="background-color: #F2AB11;">
@@ -243,7 +254,7 @@
 			</div><!-- /header -->
 
 			<div data-role="content" data-theme="a">	
-				<p> Dear Customer, Please update latest version of this App from Store to enjoy new features. </p>
+				<p style="font-size: 10pt;"> Dear Customer, Please update latest version of this App from Store to enjoy new features. </p>
 				
 				<a href="#" id="id_playstore" data-role="button" data-theme="b"					
 					onclick="javascript:window.open('market://details?id=com.phonegap.vardhamanbullion.live')">
@@ -312,15 +323,15 @@
 		  <a href="#" data-rel="back" data-role="button"  data-theme="b" 
 			data-icon="delete" data-iconpos="notext" class="ui-btn-right">&nbsp;</a>
 			
-			<p style="color:black; background-color: #FAF8A2;padding: 1.5vh;">Booking Contact 
-				<span style="font-family: Roboto Slab, arial; font-size: 8pt;color:blue;"> (Touch to Call)</span> </p>
+			<p style="color:black; background-color: #FAF8A2;padding: 10px;">Booking Contact 
+				<span style="font-family: Roboto Slab, arial; font-size: 6pt;color:blue;"> (Touch to Call)</span> </p>
 				<table style="margin: 0px;">
 					<tr>
 						<td> 
 							<a href="#" data-role="button" data-icon="phone" data-iconpos="notext">&nbsp;</a>					
 						</td>
 						
-						<td colspan=2> <a style="font-size: 8pt;" href="tel:08662577890">+91 866 2577890</a></td>
+						<td> <a style="font-size: 8pt;" href="tel:08662577890">+91 866 2577890</a></td>
 						<td>&nbsp;</td>
 					</tr>
 				
@@ -371,7 +382,7 @@
 						
 					</tr>
 					<tr>
-						<td colspan=2 style="color:black; font-size: 12pt;font-family: sans-serif;"> Vardhaman Bullion</td>
+						<td colspan=2 style="color:black; font-size: 12pt;font-family: Montserrat;"> Vardhaman Bullion</td>
 					</tr>
 					<tr>
 						<td colspan=2 style="color:yellow; font-size: 10pt;font-family: sans-serif;"> 27-14-16, Jaihind Complex, EV Plaza</td>						
@@ -405,7 +416,7 @@
 				</table>	
 				
 				
-				<div style="width:60vw; height:30vh;border: 0px; margin: 0px auto;" id="id_cu_ifrm_googlemap" >
+				<div style="width:200px; height: 100px;border: 0px; margin: 0px auto;" id="id_cu_ifrm_googlemap" >
 					
 				</div>
 				
@@ -413,7 +424,7 @@
 		
 		
 		<div data-role="popup" id="myPopupRTGS" class="ui-content" 
-			data-overlay-theme="b" style="width: 60vw;background-color: #BA0D5E;">
+			data-overlay-theme="b" style="padding: 5px 30px;background-color: #BA0D5E;">
 			
 			  <a href="#" data-rel="back" data-role="button"  data-theme="b" 
 				data-icon="delete" data-iconpos="notext" class="ui-btn-right">&nbsp;</a>
