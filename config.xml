@@ -22,9 +22,8 @@
 	<gap:platform name="android" />
 
 	<access origin="*" />	
-	<gap:plugin name='cordova-plugin-whitelist' spec='1.0.0' source='npm' />
-	<gap:plugin name="org.apache.cordova.splashscreen" />
-	<!-- <plugin name='cordova-plugin-splashscreen' spec='2.1.0' source='npm' /> -->
+	<plugin name="cordova-plugin-whitelist" spec="1.0.0" />	
+	<plugin name="org.apache.cordova.splashscreen" source="pgb" spec="1.0.0" />	
 	<allow-navigation href="http://*/*" />
 	<allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
