@@ -57,16 +57,10 @@
 	<splash src="splash.png" platform="android" density="land-xxhdpi" />
 	
 	
-	<gap:splash src="splash.png" gap:platform="android" gap:qualifier="port-ldpi"  />
-	<gap:splash src="splash.png" gap:platform="android" gap:qualifier="port-mdpi"  />
-	<gap:splash src="splash.png" gap:platform="android" gap:qualifier="port-hdpi"  />
-	<gap:splash src="splash.png" gap:platform="android" gap:qualifier="port-xhdpi" />
-
-
 
 	<!-- Preferences Permissions, Phonegap version to build -->
 	<preference name="permissions" value="none"/>
-	<preference name="phonegap-version" value="cli-6.5.0" />
+	<preference name="phonegap-version" value="cli-7.0.1" />
 	
 	<!-- Required only Notification permission -->
 	<feature name="http://api.phonegap.com/1.0/notification"/>
