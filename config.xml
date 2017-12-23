@@ -20,7 +20,7 @@
 
 	
 	<gap:platform name="android" />
-
+	<gap:plugin name='cordova-plugin-whitelist' spec='1.0.0' source='npm' />
 	<access origin="*" />	
 	<allow-navigation href="http://*/*" />
 	<allow-intent href="http://*/*" />
