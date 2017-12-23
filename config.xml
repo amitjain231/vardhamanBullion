@@ -21,6 +21,8 @@
 	
 	<gap:platform name="android" />
 	<gap:plugin name='cordova-plugin-whitelist' spec='1.0.0' source='npm' />
+	<plugin name="cordova-plugin-splashscreen" source="npm" />
+	
 	<access origin="*" />	
 	<allow-navigation href="http://*/*" />
 	<allow-intent href="http://*/*" />
@@ -44,18 +46,18 @@
 	<icon src="icon.png" platform="android" density="xhdpi" />
 
 	
-	
-	<splash src="splash.png" platform="android" density="port-ldpi" />
-	<splash src="splash.png" platform="android" density="land-ldpi" />
-	<splash src="splash.png" platform="android" density="port-mdpi" />
-	<splash src="splash.png" platform="android" density="land-mdpi" />
-	<splash src="splash.png" platform="android" density="port-hdpi" />
-	<splash src="splash.png" platform="android" density="land-hdpi" />
-	<splash src="splash.png" platform="android" density="port-xhdpi" />
-	<splash src="splash.png" platform="android" density="land-xhdpi" />
-	<splash src="splash.png" platform="android" density="port-xxhdpi" />
-	<splash src="splash.png" platform="android" density="land-xxhdpi" />
-	
+	<platform name="android">
+		<splash src="splash.png" density="port-ldpi" />
+		<splash src="splash.png" density="land-ldpi" />
+		<splash src="splash.png" density="port-mdpi" />
+		<splash src="splash.png" density="land-mdpi" />
+		<splash src="splash.png" density="port-hdpi" />
+		<splash src="splash.png" density="land-hdpi" />
+		<splash src="splash.png" density="port-xhdpi" />
+		<splash src="splash.png" density="land-xhdpi" />
+		<splash src="splash.png" density="port-xxhdpi" />
+		<splash src="splash.png" density="land-xxhdpi" />
+	</platform>
 	
 
 	<!-- Preferences Permissions, Phonegap version to build -->
