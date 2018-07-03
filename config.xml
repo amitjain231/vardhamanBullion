@@ -62,6 +62,7 @@
 	<!-- Preferences Permissions, Phonegap version to build -->
 	<preference name="permissions" value="none"/>
 	<preference name="phonegap-version" value="cli-7.0.1" />
+	<preference name="android-targetSdkVersion" value="26"/>
 	
 	<!-- Required only Notification permission -->
 	<feature name="http://api.phonegap.com/1.0/notification"/>
