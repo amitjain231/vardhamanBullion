@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.vardhamanbullion.live"
         versionCode="10005"
-        android-versionCode="10005" 
+        android-versionCode="10006" 
         version   = "1.0.0">
 
 
